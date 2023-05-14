@@ -13,12 +13,35 @@
   <body>
   <div class="container">
         <!-- Content here -->
-        <h1>Hello, world!</h1>
+        <h1>All Employees</h1>
         <hr>
-        <a class="btn btn-primary" href="/all_emp" role="button">view employee</a>
-        <a class="btn btn-primary" href="/add_emp" role="button">Add employee</a>
-        <a class="btn btn-primary" href="/remove_emp" role="button">Remove employee</a>
-        <a class="btn btn-primary" href="/filter_emp" role="button">filter employee</a>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">First_name</th>
+                <th scope="col">Last_Name</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Bonus</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Location</th>
+              </tr>
+            </thead>
+            {% for emp in emps %}
+            <tbody>
+              <tr>
+                <th scope="row">{{emp.id}}</th>
+                <td>{{emp.first_name}}</td>
+                <td>{{emp.last_name}}</td>
+                <td>{{emp.salary}}</td>
+                <td>{{emp.bonus}}</td>
+                <td>{{emp.phone}}</td>
+                <td>{{emp.dept.location}}</td>
+              </tr>
+             
+            </tbody>
+              {% endfor %}
+          </table>
   </div>
     
 
