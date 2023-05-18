@@ -11,7 +11,40 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    
+    <div class="container">
+      <h1>Add an Employee</h1>
+      <hr>
+      <form action="/add_emp" method="post">
+        <!-- Security token! -->
+        {% csrf_token %}
+        
+          <label for="first_name ">First Name</label><br>
+          <input type="text" name="first_name" id="firstname" ><br>
+
+          <label for="last_name">Last Name</label> <br>
+          <input type="text" name="last_name" id="lastname" > <br>
+
+          <label for="dept">Department</label> <br>
+          <input type="text" name="dept" id="department" > <br>
+
+          <label for="salary ">Salary</label> <br>
+          <input type="number" name="salary" id="salary" ><br>
+
+          <label for="bonus">Bonus</label><br>
+          <input type="number" name="bonus" id="bonus" ><br>
+
+          <label for="phone">Phone</label><br>
+          <input type="number" name="phone" id="phone" ><br>
+
+          <label for="role">Role</label><br>
+          <input type="text" name="role" id="role" ><br>
+        <hr>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
